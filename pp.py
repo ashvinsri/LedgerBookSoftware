@@ -1,0 +1,22 @@
+from tkinter import *
+def selected():
+    result.config(text=v1.get())
+root=Tk()
+root.geometry("120x200")
+l1=Label(root,text="Ashvin")
+l1.grid(row=0,column=0)
+l1=Label(root,text="Srivastava")
+l1.grid(row=1,column=0)
+v1=StringVar()
+v2=StringVar()
+e1=Entry(root,textvariable=v1,width=20)
+e2=Entry(root,textvariable=v1,width=20)
+e1.grid(row=0,column=1,padx=10)
+e2.grid(row=1,column=1,padx=10)
+result=Label(root,text="")
+result.grid(row=2,column=1,columnspan=2)
+b1=Button(root,text="Press",command=selected)
+b1.grid(row=3,column=0)
+def selected():
+    result.config(text=v1)
+root.mainloop()
